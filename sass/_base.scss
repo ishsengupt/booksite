@@ -126,6 +126,14 @@ body {
   justify-content: center;
 }
 
+.neu-icon:active {
+  box-shadow: 8px 8px 12px #1b1e20 inset, -8px -8px 12px #25282c inset;
+}
+
+.power-btn:active {
+  box-shadow: 8px 8px 12px #1b1e20 inset, -8px -8px 12px #25282c inset;
+}
+
 .neut-icon {
   margin: 10px 10px;
   border-radius: 8px;
@@ -215,6 +223,7 @@ p {
 .mid-info {
   color: #fff;
   text-align: left;
+  max-height: 306.55px;
 }
 
 .mid-inside {
@@ -225,6 +234,10 @@ p {
   overflow-y: scroll;
   max-height: 250px;
   padding-top: 20px;
+}
+
+.mid-inside::-webkit-scrollbar {
+  display: none;
 }
 
 .x-scroll {
@@ -248,6 +261,13 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.full-card-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .card-1 {
@@ -292,6 +312,10 @@ p {
   padding: 8px;
   transition: 0.3s;
   z-index: 9998;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .card-3 {
@@ -452,20 +476,21 @@ p {
 }
 
 .toggle-card-on-info {
-  margin-bottom: 40px;
-  width: 275px;
+  width: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 .inverted-info {
+  opacity: 0;
   transform: translate(-12px, -20px);
   display: flex;
   flex-direction: row;
   box-shadow: inset 12px 12px 20px #171a1c, inset -12px -12px 20px #292c30;
   border-radius: 8px;
   z-index: 9997;
+  transition: 0.3 all ease;
 }
 
 .actual-info {
@@ -481,11 +506,6 @@ p {
   flex-direction: column;
   align-items: flex-start;
   padding: 8px;
-}
-
-.enlarge {
-  width: 120px;
-  height: 180px;
 }
 
 .c1 {

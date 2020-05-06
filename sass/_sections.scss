@@ -4,6 +4,25 @@
   --star-background: #fc0;
 }
 
+.raised-highlight {
+  //box-shadow: 2px 2px 3px #1c1e21, -2px -2px 4px #24282b;
+  border-radius: 2px;
+}
+
+.image--cover {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  object-fit: fill;
+  object-position: center;
+  filter: grayscale(100%);
+}
+
+.profile-icon {
+  text-align: center;
+}
+
 .left-section1 {
   display: flex;
   flex-direction: column;

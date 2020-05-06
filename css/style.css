@@ -89,6 +89,12 @@ body {
   align-items: center;
   justify-content: center; }
 
+.neu-icon:active {
+  box-shadow: 8px 8px 12px #1b1e20 inset, -8px -8px 12px #25282c inset; }
+
+.power-btn:active {
+  box-shadow: 8px 8px 12px #1b1e20 inset, -8px -8px 12px #25282c inset; }
+
 .neut-icon {
   margin: 10px 10px;
   border-radius: 8px;
@@ -160,7 +166,8 @@ p {
 
 .mid-info {
   color: #fff;
-  text-align: left; }
+  text-align: left;
+  max-height: 306.55px; }
 
 .mid-inside {
   margin: 0 -20px;
@@ -170,6 +177,9 @@ p {
   overflow-y: scroll;
   max-height: 250px;
   padding-top: 20px; }
+
+.mid-inside::-webkit-scrollbar {
+  display: none; }
 
 .x-scroll {
   margin: 0 -24px;
@@ -186,6 +196,12 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.full-card-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px; }
 
 .card-1 {
   width: 100px;
@@ -222,6 +238,9 @@ p {
   padding: 8px;
   transition: 0.3s;
   z-index: 9998; }
+
+::-webkit-scrollbar {
+  display: none; }
 
 .card-3 {
   width: 100px;
@@ -342,19 +361,20 @@ p {
   height: 200px; }
 
 .toggle-card-on-info {
-  margin-bottom: 40px;
-  width: 275px;
+  width: 100px;
   display: flex;
   flex-direction: row;
   align-items: center; }
 
 .inverted-info {
+  opacity: 0;
   transform: translate(-12px, -20px);
   display: flex;
   flex-direction: row;
   box-shadow: inset 12px 12px 20px #171a1c, inset -12px -12px 20px #292c30;
   border-radius: 8px;
-  z-index: 9997; }
+  z-index: 9997;
+  transition: 0.3 all ease; }
 
 .actual-info {
   display: flex;
@@ -368,10 +388,6 @@ p {
   flex-direction: column;
   align-items: flex-start;
   padding: 8px; }
-
-.enlarge {
-  width: 120px;
-  height: 180px; }
 
 .c1 {
   bottom: -70px;
@@ -623,13 +639,24 @@ hr {
   justify-content: space-evenly;
   align-items: center; }
 
-.transformed {
-  transform: translateX(12px); }
-
 :root {
   --star-size: 10px;
   --star-color: #fff;
   --star-background: #fc0; }
+
+.raised-highlight {
+  border-radius: 2px; }
+
+.image--cover {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: fill;
+  object-position: center;
+  filter: grayscale(100%); }
+
+.profile-icon {
+  text-align: center; }
 
 .left-section1 {
   display: flex;
@@ -683,6 +710,3 @@ hr {
 
 .above {
   z-index: 9999; }
-
-.raised-highlight {
-  border-radius: 2px; }
