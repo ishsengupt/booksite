@@ -1,0 +1,77 @@
+:root {
+  --star-size: 10px;
+  --star-color: #fff;
+  --star-background: #fc0;
+}
+
+.left-section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Stars {
+  margin: 5px 0;
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; // make sure ★ appears correctly
+  line-height: 1;
+
+  &::before {
+    margin: 5px 0;
+    content: "★★★★★";
+    letter-spacing: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--star-background) var(--percent),
+      var(--star-color) var(--percent)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.trophies-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px;
+}
+
+.online {
+  box-shadow: inset 3px 3px 7px #171a1c, inset -3px -3px 7px #292c30;
+
+  color: #00d0b0;
+
+  text-shadow: 0px 0px 7px #37ffb1;
+}
+
+.review-box {
+  display: flex;
+  flex-direction: row;
+  margin: 7px 0;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  align-items: flex-start;
+}
+
+.ratings {
+  margin-right: 10px;
+}
+
+.notify-light {
+  //box-shadow: inset 3px 3px 7px #171a1c, inset -3px -3px 7px #292c30;
+  background-color: #00d0b0;
+}
+
+.above {
+  z-index: 9999;
+}
